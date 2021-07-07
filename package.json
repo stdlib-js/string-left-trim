@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-left-trim",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Trim whitespace characters from the beginning of a string.",
   "license": "Apache-2.0",
   "author": {
