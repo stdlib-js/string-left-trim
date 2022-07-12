@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import ltrim from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@v0.0.9-esm/index.mjs';
+import ltrim from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@esm/index.mjs';
 ```
 
 #### ltrim( str )
@@ -69,7 +69,7 @@ var out = ltrim( ' \r\n\t  Beep \t\t\n  ' );
 <body>
 <script type="module">
 
-import ltrim from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@v0.0.9-esm/index.mjs';
+import ltrim from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@esm/index.mjs';
 
 var str = ltrim( '   Whitespace   ' );
 // returns 'Whitespace   '
