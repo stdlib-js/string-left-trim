@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# Left Trim
+# ltrim
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -52,7 +52,7 @@ var ltrim = require( '@stdlib/string-left-trim' );
 
 #### ltrim( str )
 
-Trims whitespace from the beginning of a `string`.
+Trims whitespace from the beginning of a string.
 
 ```javascript
 var out = ltrim( ' \r\n\t  Beep \t\t\n  ' );
@@ -67,7 +67,23 @@ var out = ltrim( ' \r\n\t  Beep \t\t\n  ' );
 
 ## Notes
 
--   Following [Unicode 6.3.0][unicode] and later, "whitespace" is defined as the following characters: `[ \\f\\n\\r\\t\\v\\u0020\\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]`.
+-   Following [Unicode 6.3.0][unicode] and later, "whitespace" is defined as the following characters:
+
+    -   `\f`
+    -   `\n`
+    -   `\r`
+    -   `\t`
+    -   `\v`
+    -   `\u0020`
+    -   `\u00a0`
+    -   `\u1680`
+    -   `\u2000-\u200a`
+    -   `\u2028`
+    -   `\u2029`
+    -   `\u202f`
+    -   `\u205f`
+    -   `\u3000`
+    -   `\ufeff`
 
 </section>
 
