@@ -24,38 +24,31 @@ limitations under the License.
 
 > Trim whitespace characters from the beginning of a string.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-left-trim
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-ltrim = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var ltrim = require( 'path/to/vendor/umd/string-left-trim/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.ltrim;
-})();
-</script>
+var ltrim = require( '@stdlib/string-left-trim' );
 ```
 
 #### ltrim( str )
@@ -103,13 +96,8 @@ var out = ltrim( ' \r\n\t  Beep \t\t\n  ' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var ltrim = require( '@stdlib/string-left-trim' );
 
 var str = ltrim( '   Whitespace   ' );
 // returns 'Whitespace   '
@@ -119,18 +107,104 @@ str = ltrim( '\t\t\tTabs\t\t\t' );
 
 str = ltrim( '\n\n\nNew Lines\n\n\n' );
 // returns 'New Lines\n\n\n'
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-left-trim-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: ltrim [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'   foo   \n   bar   ' | ltrim --split /\r?\n/
+
+    # Escaped...
+    $ echo -n $'   foo   \n   bar   ' | ltrim --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ ltrim '  beep boop'
+beep boop
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n '  beep boop' | ltrim
+beep boop
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n '   foo   \t   bar   \t   baz   ' | ltrim --split '\t'
+foo   
+bar   
+baz   
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -140,8 +214,8 @@ str = ltrim( '\n\n\nNew Lines\n\n\n' );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/string/trim`][@stdlib/string/trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the beginning and end of a string.</span>
--   <span class="package-name">[`@stdlib/string/right-trim`][@stdlib/string/right-trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the end of a string.</span>
+-   <span class="package-name">[`@stdlib/string-trim`][@stdlib/string/trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the beginning and end of a string.</span>
+-   <span class="package-name">[`@stdlib/string-right-trim`][@stdlib/string/right-trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the end of a string.</span>
 
 </section>
 
@@ -206,6 +280,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[cli-section]: https://github.com/stdlib-js/string-left-trim#cli
+[cli-url]: https://github.com/stdlib-js/string-left-trim/tree/cli
+[@stdlib/string-left-trim]: https://github.com/stdlib-js/string-left-trim/tree/main
+
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
@@ -224,9 +302,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/trim]: https://github.com/stdlib-js/string-trim/tree/umd
+[@stdlib/string/trim]: https://github.com/stdlib-js/string-trim
 
-[@stdlib/string/right-trim]: https://github.com/stdlib-js/string-right-trim/tree/umd
+[@stdlib/string/right-trim]: https://github.com/stdlib-js/string-right-trim
 
 <!-- </related-links> -->
 
