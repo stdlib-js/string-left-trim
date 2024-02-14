@@ -44,6 +44,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+ltrim = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-left-trim/tags). For example,
+
+```javascript
 ltrim = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@v0.2.0-umd/browser.js' )
 ```
 
@@ -56,7 +61,7 @@ var ltrim = require( 'path/to/vendor/umd/string-left-trim/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -118,7 +123,7 @@ var out = ltrim( ' \r\n\t  Beep \t\t\n  ' );
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-left-trim@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
