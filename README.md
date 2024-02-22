@@ -273,8 +273,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-left-trim.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-left-trim
 
-[test-image]: https://github.com/stdlib-js/string-left-trim/actions/workflows/test.yml/badge.svg?branch=v0.2.0
-[test-url]: https://github.com/stdlib-js/string-left-trim/actions/workflows/test.yml?query=branch:v0.2.0
+[test-image]: https://github.com/stdlib-js/string-left-trim/actions/workflows/test.yml/badge.svg?branch=v0.2.1
+[test-url]: https://github.com/stdlib-js/string-left-trim/actions/workflows/test.yml?query=branch:v0.2.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-left-trim/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-left-trim?branch=main
