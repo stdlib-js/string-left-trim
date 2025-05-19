@@ -35,19 +35,102 @@ limitations under the License.
 
 > Trim whitespace characters from the beginning of a string.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/string-left-trim
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
 
+</section>
 
+<section class="usage">
 
+## Usage
+
+```javascript
+var ltrim = require( '@stdlib/string-left-trim' );
+```
+
+#### ltrim( str )
+
+Trims whitespace from the beginning of a string.
+
+```javascript
+var out = ltrim( ' \r\n\t  Beep \t\t\n  ' );
+// returns 'Beep \t\t\n  '
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   Following [Unicode 6.3.0][unicode] and later, "whitespace" is defined as the following characters:
+
+    -   `\f`
+    -   `\n`
+    -   `\r`
+    -   `\t`
+    -   `\v`
+    -   `\u0020`
+    -   `\u00a0`
+    -   `\u1680`
+    -   `\u2000-\u200a`
+    -   `\u2028`
+    -   `\u2029`
+    -   `\u202f`
+    -   `\u205f`
+    -   `\u3000`
+    -   `\ufeff`
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var ltrim = require( '@stdlib/string-left-trim' );
+
+var str = ltrim( '   Whitespace   ' );
+// returns 'Whitespace   '
+
+str = ltrim( '\t\t\tTabs\t\t\t' );
+// returns 'Tabs\t\t\t'
+
+str = ltrim( '\n\n\nNew Lines\n\n\n' );
+// returns 'New Lines\n\n\n'
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -65,7 +148,7 @@ npm install -g @stdlib/string-left-trim-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: ltrim [options] [<string>]
@@ -85,7 +168,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -105,7 +188,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ ltrim '  beep boop'
@@ -140,9 +223,10 @@ baz
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/string-left-trim`][@stdlib/string-left-trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the beginning of a string.</span>
 -   <span class="package-name">[`@stdlib/string-trim`][@stdlib/string/trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the beginning and end of a string.</span>
 -   <span class="package-name">[`@stdlib/string-right-trim`][@stdlib/string/right-trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the end of a string.</span>
 
@@ -163,7 +247,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -176,7 +260,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -186,8 +270,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-left-trim-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-left-trim-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-left-trim.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-left-trim
 
 [test-image]: https://github.com/stdlib-js/string-left-trim/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/string-left-trim/actions/workflows/test.yml?query=branch:main
